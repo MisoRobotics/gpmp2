@@ -12,6 +12,7 @@ set(GPMP2_VERSION_MAJOR 0)
 set(GPMP2_VERSION_MINOR 2)
 set(GPMP2_VERSION_PATCH 0)
 set(GPMP2_VERSION_STRING "${GPMP2_VERSION_MAJOR}.${GPMP2_VERSION_MINOR}.${GPMP2_VERSION_PATCH}")
+set(gpmp2_VERSION_STRING "${GPMP2_VERSION_MAJOR}.${GPMP2_VERSION_MINOR}.${GPMP2_VERSION_PATCH}")
 
 
 # option: whether turn on Matlab toolbox
@@ -65,7 +66,7 @@ if(GPMP2_BUILD_MATLAB_TOOLBOX)
   # wrap
   include(GtsamMatlabWrap)
   wrap_and_install_library(gpmp2.h ${PROJECT_NAME} "${CMAKE_CURRENT_SOURCE_DIR}" "")
-  
+
   # install matlab functions and scripts
   add_subdirectory(matlab)
 endif()
